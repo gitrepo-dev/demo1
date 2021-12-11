@@ -3,16 +3,19 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import * as THREE from "three";
 
-import EarthDayMap from "../assets/textures/8k_earth_daymap.jpg";
-import EarthNormalMap from "../assets/textures/8k_earth_normal_map.jpg";
-import EarthSpecularMap from "../assets/textures/8k_earth_specular_map.jpg";
+import EarthDayMap from "../assets/textures/e1.png";
+import EarthNormalMap from "../assets/textures/e2.png";
+import EarthSpecularMap from "../assets/textures/e3.jpg";
 import EarthCloudsMap from "../assets/textures/8k_earth_clouds.jpg";
+import E4 from "../assets/textures/a.jpg";
+import E5 from "../assets/textures/d.jpeg";
+import E6 from "../assets/textures/c.jpg";
 import { TextureLoader } from "three";
 
 export default function Banner(props) {
   const [colorMap, normalMap, specularMap, cloudsMap] = useLoader(
     TextureLoader,
-    [EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudsMap]
+    [EarthDayMap, EarthNormalMap, EarthSpecularMap, E4, E5, E6]
   );
 
   const earthRef = useRef();
@@ -27,7 +30,7 @@ export default function Banner(props) {
 
   return (
     <>
-      <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
+      <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={5} />
       <Stars
         radius={1000}
         depth={60}
@@ -36,7 +39,7 @@ export default function Banner(props) {
         saturation={0}
         fade={true}
       />
-      <mesh ref={cloudsRef} position={[0, 0, 3]}>
+      <mesh ref={cloudsRef} position={[10, 0, 3]}>
         <sphereGeometry args={[1.005, 32, 32]} />
         <meshPhongMaterial
           map={cloudsMap}
