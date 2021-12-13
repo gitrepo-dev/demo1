@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import Navigation from '../components/Navigation';
 import Mission from '../components/Mission';
 import Carousel from '../components/Carousel';
+import Timeline from '../components/Timeline';
 
 export default function Home() {
     return (
@@ -19,6 +20,7 @@ export default function Home() {
                 </Canvas>
             </div>
             <Mission />
+            <Timeline />
         </>
     )
 }

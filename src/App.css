@@ -253,6 +253,50 @@ body{
 /* mission start */
 
 
+.timeline-carousel {
+  width: 100%;
+  overflow-y: hidden;
+  height: 70vh;
+}
+.timeline-controls li:first-child,
+.timeline-controls li:nth-last-child(2){
+  display: none;
+}
+.timeline-controls{
+  background: #ffffff !important;
+  margin-top: 2rem;
+}
+.timeline-carousel .timeline-card-content{
+  min-height: auto;
+  padding: 13px;
+  border-radius: 5px;
+}
+.timeline-carousel .timeline-card-content .show-more{
+  display: none;
+}
+
+.timeline-carousel .vertical_alternating::-webkit-scrollbar {
+  display: none;
+}
+.timeline-carousel .vertical_alternating {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+.banner-type-carousel{
+  font-size: 100px;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 50%;  
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.banner-type-carousel #typed{
+  
+}
 
 
 /* mission end */

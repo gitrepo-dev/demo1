@@ -21,7 +21,16 @@ export default function Carousel() {
   };
 
   return (
-    <div className="slick-slider-wrapper">
+    <div className='banner-type-carousel'>
+      <div id="typed-strings">
+        <h1 className="font-700 font-poppins">BlockChain</h1>
+        <h1 className="font-700 font-poppins">Make World</h1>
+      </div>
+      <span id="typed" className="font-700 text-white font-poppins"></span>
+
+
+      
+      {/* <div className="slick-slider-wrapper">
       <Slider {...settings}>
         <div className="slider-title">
           <h2>Block<span>Chain</span></h2>
@@ -32,6 +41,7 @@ export default function Carousel() {
           <p>Feature ready</p>
         </div>
       </Slider>
+    </div> */}
     </div>
   )
 }
